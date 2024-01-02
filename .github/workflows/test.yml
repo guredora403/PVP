@@ -1,0 +1,17 @@
+name: Build and release on GitHub
+
+on:
+  push:
+    branches:
+      - gh_actions
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      -name: test
+        run: echo "${{ github.event.head_commit.timestamp }}"
+
