@@ -15,3 +15,6 @@ jobs:
       - name: test
         run: echo "${{ github.event.head_commit.timestamp }}"
 
+      - name: showRef
+        run: echo "${{ github.ref }}"
+
